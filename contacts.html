@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Наши контакты</title>
- <meta name="description" content="Краткое описание главной страницы вашего сайта">
- <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
- <title>О нас - Название вашего сайта</title>
- <meta name="description" content="наши контакты">
+    <meta charset="UTF-8">
+    <!-- Важная мета-информация для корректного отображения на мобильных устройствах --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - SiteFactory</title>
+    <meta name="description" content="Свяжитесь с нашими сотрудниками при возникновении вопросов и предложений">
+    <!-- Подключение фавиконки -->
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <!-- Open-Graph мета-теги -->
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="SiteFactory - Фабрик сайтов"> 
+    <meta property="og:description" content="Наши контакты для оперативной связи по вопросам и предложениям."> 
+    <meta property="og:image" content="https://avatars.mds.yandex.net/get-ydo/2426891/2a0000016e86f9a4690412cade1e654d6a72/diploma"> 
+    <!-- Подключение стилей и скриптов -->
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
- <header>
- <a href="/">Логотип или название сайта</a>
- <!-- Главное меню навигации -->
- <nav>
- <ul>
- <li><a href="index.html">Главная</a></li>
- <li><a href="about.html">О нас</a></li>
- <li><a href="contacts.html">Контакты</a></li>
- </ul>
- </nav>
- </header>
- <main>
- <!-- Простые "хлебные крошки" -->
- <nav aria-label="Хлебные крошки">
- <a href="index.html">Главная</a> →
- <span>О нас</span>
- </nav>
- <h1>О нашей компании</h1>
- <section>
- <h2>Наша история</h2>
- <p>Наши контакты: +79992368498</p>
- </section>
- <section>
- <h2>Наша команда</h2>
- <p>Текст о команде...</p>
- </section>
- </main>
- <footer>
- <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
- <p>Телефон: +7 (123) 456-78-90</p>
- </footer>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="header__logo">SiteFactory</a>
+            <!-- Главное меню навигации -->
+            <nav class="header-nav">
+               <ul class="header-nav__list">
+                   <li><a href="index.html">Главная</a></li>
+                   <li><a href="about.html">О нас</a></li>
+                   <li><a href="contacts.html">Контакты</a></li>
+                   <li><a href="feadback.html">Обратная связь</a></li>
+               </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Простые "хлебные крошки" -->
+            <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                <a href="../index.html" class="breadcrumbs__home">Главная</a> >
+                <span class="breadcrumbs__current">Контакты</span>
+            </nav>
+
+            <h1 class="main__title">Наши контакты</h1>
+
+            <h2 class="main__qcontacts">Контакты для вопросов</h2>
+            <section class="questions-contacts">
+                <p>Менеджер по вопросам #1 - 7 (732) 408-00-93</p>
+                <p>Менеджер по вопросам #2 - 7 (941) 227-75-87</p>
+            </section>
+            <h2 class="main__scontacts">Контакты для предложений</h2>
+            <section class="suggestions-contacts">
+                <p>Менеджер по предложениям - 7 (390) 184-28-78</p>
+            </section>
+
+            <h1>Хотите оставить отзыв?</h1>
+            <section class="feedback-contacts">
+                <a href="feedback.html" class="feedback-contacts__link">Напишите нам на почту!</a>
+                <p class="feedback-contacts__desc">Мы рады любой обратной связи!</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy">&copy; 2023 SiteFactory. Все права защищены.</p>
+            <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
+        </div>
+    </footer>
 </body>
 </html>
