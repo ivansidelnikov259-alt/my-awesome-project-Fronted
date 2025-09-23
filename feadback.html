@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Важная мета-информация для корректного отображения на мобильных устройствах --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь - SiteFactory</title>
+    <meta name="description" content="Отправьте отзыв о нашем сервисе к нам на почту">
+    <!-- Подключение фавиконки -->
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <!-- Open-Graph мета-теги -->
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="SiteFactory - Фабрик сайтов"> 
+    <meta property="og:description" content="Отправка отзыва о нашем сервисе"> 
+    <meta property="og:image" content="https://avatars.mds.yandex.net/get-ydo/2426891/2a0000016e86f9a4690412cade1e654d6a72/diploma"> 
+    <!-- Подключение стилей и скриптов -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+        <a href="../index.html" class="header__logo">SiteFactory</a>
+            <!-- Главное меню навигации -->
+            <nav class="header-nav">
+               <ul class="header-nav__list">
+                   <li><a href="index.html">Главная</a></li>
+                   <li><a href="about.html">О нас</a></li>
+                   <li><a href="contacts.html">Контакты</a></li>
+                   <li><a href="feedback.html">Обратная связь</a></li>
+               </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Простые "хлебные крошки" -->
+            <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                <a href="../index.html" class="breadcrumbs__home">Главная</a> >
+                <span class="breadcrumbs__current">Обратная связь</span>
+            </nav>
+
+            <section class="feedback">
+                <h1 class="feedback__title">Оставьте свой отзыв</h1>
+                <p class="feedback__desc">Если Вы хотите оставить отзыв о нашем сервисе или у Вас возникли вопросы/жалобы, нажмите кнопку ниже для того, чтобы открыть отдельное окно с формой.</p>
+
+                <!-- Кнопка открытия модалки --> 
+                <button id="feedback__open-dialog" type="button">Написать нам</button> 
+
+                <!-- Модалка с формой -->
+                 <dialog id="contact-dialog" aria-labelledby="dialogTitle">
+                    <h2 id="contact-dialog__title">Обратная связь</h2> 
+
+                    <form id="contact-form" method="dialog" novalidate>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" required minlength="2" autocomplete="given-name">
+
+                        <label for="email">Ваш E-mail:</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel"
+                        aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__"
+                        required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+                        <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+
+                        <label for="date">Укажите дату обращения:</label>
+                        <input type="date" id="date" name="date">
+
+                        <label for="topic">Выберите тему обращения:</label>
+                        <select name="topic" id="topic" required>
+                            <option value="">Выберите тему</option>
+                            <option>Отзыв</option>
+                            <option>Вопрос</option>
+                            <option>Жалоба</option>
+                        </select>
+
+                        <label for="message">Ваше сообщение:</label> 
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <div class="form-actions">
+                            <button type="button" id="form-actions__close-dialog">Закрыть</button>
+                            <button type="submit">Отправить</button> 
+                        </div>
+                    </form>
+                 </dialog>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy">&copy; 2023 SiteFactory. Все права защищены.</p>
+            <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
+        </div>
+    </footer>
+</body>
+</html>
