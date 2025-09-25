@@ -52,7 +52,8 @@ form?.addEventListener('submit', (e) => {
 
     // Успешная отправка формы
     e.preventDefault();
-    document.getElementById('contact-form')?.close('success');
+    alert('Подтвердите отправку запроса и мы обязательно с вами свяжемся! Наверное..... Но возможно нет.....');
+    dig.close('success');
     form.reset();
 });
 
