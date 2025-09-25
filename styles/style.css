@@ -7,7 +7,7 @@
     /* Палитра */ 
     --color-bg: #fff;
     --color-fg: #0b0b0b;
-    --color-muted: #666;
+    --color-muted: #7ec595;
     --color-primary: #0a84ff;
     --color-danger: #b00020; 
     
@@ -27,11 +27,15 @@
     color-scheme: light;
 } 
 
+
+.feedback {
+    background: linear-gradient(#ffffff 0%, #c4f0c7 50%, #9afab8 100%);
+}
 /* Тёмная тема: переопределяем только значения токенов */ 
 body.theme-dark{
     --color-bg: #0b0b0b;
-    --color-fg: #f5f5f5;
-    --color-muted: #aaa;
+    --color-fg: #7ec595 50%; 
+    --color-muted: #7ec595 50%;
     --color-primary: #6aa2ff; 
 
     /* Тёмные скорллбары/контролы при активной тёмной теме */
@@ -48,7 +52,7 @@ html {
 }
 
 body {
-    background-color: var(--color-bg);
+    background: linear-gradient(#ffffff 0%, #7ec595 50%, #00b806 100%);
     color: var(--color-fg);
     font-family: var(--font-body);
     line-height: 1.5;
@@ -58,6 +62,8 @@ body {
 .container {
     width: min(100% - 2*var(--space-4), 1120px);
     margin-inline: auto;
+    background: linear-gradient(#ffffff 0%, #7ec595 50%, #00b806 100%);
+
 }
 
 /* Формы: размеры, отступы, визуальный порядок */ 
@@ -184,6 +190,14 @@ button, input, select, textarea{
 
 main {
     padding: 10px;
-    background: linear-gradient(rgb(241, 241, 241), rgb(182, 182, 182));
+    background: linear-gradient(#ffffff 0%, #7ec595 50%, #00b806 100%);
     border: 1px solid var(--color-fg);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+main {
+    min-height: calc(100vh - 200px);
+    padding: var(--space-3);
 }
